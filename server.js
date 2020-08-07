@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'assets')));
 // Set our API routes
 // app.use('/api', api);
 // Catch all other routes and return the index file
-// app.get('*', (req, res) => { res.sendFile(path.join(__dirname, 'dist/index.html')); });
+app.get('*', (req, res) => { res.sendFile(path.join(__dirname, 'index.html')); });
 app.use('/', route)
 // Get port from environment and store in Express
 const port = process.env.PORT || '8080';
